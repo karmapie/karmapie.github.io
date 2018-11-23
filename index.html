@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Karma Pie</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="karmapie.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-inline my-1">
+      <input id="subreddit" class="form-control mr-1" type="text" placeholder="Subreddit">
+      <input id="words" class="form-control mr-1" type="text" placeholder="Keywords">
+      <button id="indexButton" class="btn btn-primary" type="button">Index</button>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Total</th>
+          <th>Matched</th>
+          <th>Percent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Posts</th>
+          <td class="total-posts"></td>
+          <td class="matched-posts"></td>
+          <td class="percent-posts"></td>
+        </tr>
+        <tr>
+          <th>Karma</th>
+          <td class="total-karma"></td>
+          <td class="matched-karma"></td>
+          <td class="percent-karma"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <canvas id="piechart"></canvas>
+  </div>
+</body>
+</html>
